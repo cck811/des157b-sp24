@@ -1,0 +1,33 @@
+body {
+    font-family: Arial;
+    color: #333;
+    background-color: cornflowerblue;
+    padding: 20px 0;
+}
+
+main {
+    max-width: 800px;
+    padding: 20px;
+    margin: auto;
+    background-color: #fff;
+}
+
+header, footer {
+    background-color: rgb(218, 32, 177);
+    text-align: center;
+}
+
+footer {
+    padding: 20px;
+    color: #fff;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px;
+    color: white;
+}
+
+p {
+    line-height: 1.5em;
+}

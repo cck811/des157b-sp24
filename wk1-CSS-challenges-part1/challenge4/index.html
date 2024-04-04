@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Challenge 4</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>CSS Challenge 4</h1>
+        </header>
+        <section id="content">
+            <article>
+                <h2>Fix The Paragraphs in the Sidebar</h2>
+                <p>For this challenge, the paragraphs in the sidebar should be white, and using the Times New Roman typeface, but they are not. There is a rule on line 40 of the stylesheet that indicates these settings, but it is not working. Why not? What can you do to fix it, and what CSS feature is at the root of the problem? (Inheritance, cascade, or specificity).</p>
+
+                <p><strong>Solution: The problem is specificity. Because the rule for the paragraphs in the article is prefaced with an ID for "content", those settings are more specific and overriding the settings for the paragraphs in the aside element. You can fix it by prefacing the aside p rule with #content. That way, the rule for the paragraphs in the aside element is more specific than the rule for the paragraphs in the article.</strong></p> 
+                    
+                <p><strong> are other possbible solutions to this problem too, such as changing the #content p rule to article p, so that the specificty conflict is not created in the first place.</strong></p>
+
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni porro voluptates vero voluptatum labore blanditiis magnam recusandae. Aspernatur et, id maiores, molestiae fugit quam esse sequi eius, tempora autem laborum?</p>
+                <p>Reprehenderit maxime sequi impedit minima, ipsa animi alias omnis illum dicta odit quas vel eveniet. Temporibus saepe impedit quisquam et eaque consequuntur! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non quidem rem quod sunt fugiat, quos ipsum quae blanditiis sint doloribus rerum sed quia minus optio illum quisquam alias, nulla enim.</p>
+            </article>
+            <aside>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque blanditiis doloremque perferendis cupiditate ullam nostrum assumenda at voluptatem facere inventore, eligendi magni eum exercitationem ipsum nemo non voluptate aspernatur aut.</p>
+
+                <p>Rerum asperiores blanditiis maxime facere necessitatibus aut numquam eos. Culpa ullam voluptate laborum quia iure, non eveniet dicta asperiores ea vitae. Suscipit!</p>
+            </aside>
+        </section>
+        
+        <footer>
+            <p>Footer information here</p>
+        </footer>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+body {
+    font-family: Arial;
+    color: #333;
+    background-color: #525762;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+#container {
+    max-width: 960px;
+    margin: auto;
+    background-color: #fff;
+}
+
+header, footer {
+    text-align: center;
+}
+
+nav {
+    border-top: 10px solid #da5d5d;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+nav ul li {
+    padding: 10px 0;
+}
+nav ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:#cb0101;
+    border-right: 2px solid #cb0101;;
+}
+
+nav ul li:last-of-type a {
+    border-right: none;
+}
+
+/* #content {
+    Use this rule to flip the direction of content
+} */
+
+main {
+    padding: 20px;
+}
+
+aside {
+    background-color: #e5f6ff;
+    padding: 20px;
+}
+
+footer {
+    background-color: rgb(252, 227, 129);
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    background-color: rgb(252, 227, 129);
+    margin: 0;
+    padding: 20px;
+    color:#333;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+@media only screen and (min-width: 650px) {
+    /* You will need rules for header, nav, nav ul, nav ul li, nav ul li a, main, and main article to get the display for tablet to work right */
+   
+}
+
+@media only screen and (min-width: 960px) {
+    /* 
+    You just need one rule for #content here to get this to display right
+    */
+}

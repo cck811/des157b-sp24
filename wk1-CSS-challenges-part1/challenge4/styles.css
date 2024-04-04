@@ -1,0 +1,61 @@
+body {
+    font-family: Arial;
+    color: #333;
+    background-color: cornflowerblue;
+    padding: 20px 0;
+}
+
+#container {
+    max-width: 960px;
+    padding: 20px;
+    margin: auto;
+    background-color: #fff;
+}
+
+header, footer {
+    background-color: rgb(83, 83, 5);
+    text-align: center;
+}
+
+#content {
+    display: flex;
+    gap: 20px;
+}
+
+#content p {
+    color:rebeccapurple;
+    font-family: Arial;
+}
+
+article {
+    width: 70%;
+}
+
+aside {
+    width: 30%;
+    background-color: olive;
+    padding: 20px;
+}
+
+aside p {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.15em;
+    font-size: .8em;
+    color: white;
+}
+
+
+footer {
+    padding: 20px;
+    color: #fff;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px;
+    color: white;
+}
+
+p {
+    line-height: 1.5em;
+}
