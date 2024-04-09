@@ -27,7 +27,7 @@
             for (const section of sections) { // Remove the light mode class from each section
                 section.removeAttribute('class');
             }
-            body.style.backgroundPosition = '0 -220px, 300px 110px';
+            body.style.backgroundPosition = '0 -220px, -560px 110px';
             mode = 'dark'; // Update the mode to dark
         }
 
