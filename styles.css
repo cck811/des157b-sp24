@@ -1,0 +1,207 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~CSS Quick Reset~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+img {
+    display: block; 
+    max-width: 100%; /* keeps image within container*/
+    height: auto; /*maintain image proportion and no stretch */
+}
+nav ul {
+    list-style-type: none; /*no bullets */
+    margin: 0;
+    padding: 0
+}
+a {
+    text-decoration: none; /*remove underline for all clickable link*/
+}
+h1, h2, h3, h4, p { /*removing the default padding*/
+    margin: 0;
+    padding: 0;
+}
+p, h3 { /*change default margin*/
+    margin-bottom: 1em; 
+}
+h1, h2 { /*change default margin*/
+    margin-bottom: .5em; 
+}
+main{
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CSS Start~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Page styling */
+body {
+    background-color: #222625; /* Dark mode background color */
+    color: #D9042B; /* Dark mode text color */
+    transition: all 2s;
+    background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1100' height='220'%3E%3Ctext x='0' y='220' font-family='Montserrat' font-weight='800' font-size='120' fill='rgba(128, 128, 128, 0.2)'%3EANTHONY CHAN%3C/text%3E%3C/svg%3E")
+    ,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1100' height='220'%3E%3Ctext x='0' y='220' font-family='Montserrat' font-weight='800' font-size='120' fill='rgba(128, 128, 128, 0.2)'%3EANTHONY CHAN%3C/text%3E%3C/svg%3E");
+
+     background-repeat: repeat, repeat;
+     background-position: 0 220px, -600px 110px; /* Offset should match SVG height */
+}
+
+
+body.switch {
+    background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1100' height='220'%3E%3Ctext x='0' y='220' font-family='Montserrat' font-weight='800' font-size='120' fill='rgb(242, 129, 29, 0.4)'%3EANTHONY CHAN%3C/text%3E%3C/svg%3E")
+    ,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1100' height='220'%3E%3Ctext x='0' y='220' font-family='Montserrat' font-weight='800' font-size='120' fill='rgb(75, 131, 242, 0.4)'%3EANTHONY CHAN%3C/text%3E%3C/svg%3E");
+    background-color: #F2F2F2; /* Light mode background color */
+    color: #333; /* Light mode text color */
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+
+    min-width: 900px;
+    margin: 1em auto;
+    padding-top: 2em;
+}
+
+header {
+    margin: 0 auto 2em auto;
+}
+
+#banner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color:#A3BFAF;  /* Default banner color, used in dark mode */
+    color: #ffffff;
+    overflow: hidden;
+    display: grid;
+	place-items: center;
+    border-radius: 10px;
+    transition: all 2s;
+}
+#banner h3{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 50px;
+    margin: 1em;
+}
+
+#banner.switch {
+    background-color: #F2F2F2; /* Light mode banner background color */
+    color: #4B83F2; /* Light mode banner text color */
+    transition: all 2s;
+}
+
+#banner:hover {
+    transform: scale(1.05); /* Slightly increase size */
+    background-color: #F2F2F2; /* Change background color on hover */
+    color: #252525;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1em auto;
+    gap: 100px
+}
+
+main section {
+    flex: 1;
+    margin: 0 .25em;
+    padding: 1em;
+    background-color: #222625; /* Dark mode section background color */
+    border-radius: 10px;
+
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center text lines */
+}
+
+main section.switch {
+    background-color: #F2F2F2; /* Light mode section background color */
+    color: #1C2140; /* Light mode section text color */
+}
+
+a {
+    text-decoration: none;
+    width: 150px;
+}
+
+nav ol, nav ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+section a {
+    line-height: 1.1em;
+    display: inline-block;
+    padding: .5em;
+    color: #F2E9EE; /* Text color for links in dark mode */
+}
+
+section a:hover {
+    background-color: #D9042B; /* Background color for hovered links in dark mode */
+    color: #F2E9EE; /* Text color for hovered links in dark mode */
+}
+
+section.switch a {
+    color: #4B83F2; /* Text color for links in light mode */
+}
+
+section.switch a:hover {
+    background-color: #4B83F2; /* Background color for hovered links in light mode */
+    color: rgb(235, 235, 235); /* Text color for hovered links in light mode */
+}
+
+button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+    background-color: #038C73; /* Button background color in dark mode */
+    color: #F2E9EE; /* Button text color in dark mode */
+    border: 0px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #A3BFAF; /* Button hover background color in dark mode */
+    cursor: pointer;
+}
+
+button.switch {
+    background-color: #f2f2f2; /* Light mode button background color */
+    color: #F2811D; /* Button text color in dark mode */
+}
+
+button.switch:hover {
+    background-color: #F2811D; /* Light mode button hover background color */
+    color: #f2f2f2; /* Light mode button hover text color */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~Dots~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+    z-index: -1; /* Ensures the balls are behind other content */
+    width: 2em; 
+    height: 2em; 
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~Class title~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#animated-container {
+    overflow: hidden; /* Hide the overflow text */
+    white-space: nowrap; /* Keep the text in a single line */
+    width: 50%; /* Set the container width */
+}
+
+h2 {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    display: inline-block;
+    animation: slide-left 20s linear infinite;
+}
+
+@keyframes slide-left {
+    0% { transform: translateX(0%); } /* Start from the initial position */
+    100% { transform: translateX(-33.3333%); } /* Move text left to show next repetition */
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~BG animation~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
