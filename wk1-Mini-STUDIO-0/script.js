@@ -74,5 +74,8 @@ balls.forEach((el, i, ra) => {
     }
   );
 });
-
+    /*-----------------------------------Banner-----------------------------------------*/
+document.querySelector('#banner').addEventListener('click', function() {
+    this.querySelector('h3').textContent = "Didn't tell you to click this... smh"; // Change the text content on click
+});
 })();

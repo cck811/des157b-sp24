@@ -74,7 +74,7 @@ header {
     display: grid;
 	place-items: center;
     border-radius: 10px;
-
+    transition: all 2s;
 }
 #banner h3{
     font-family: 'Montserrat Subrayada', sans-serif;
@@ -84,8 +84,14 @@ header {
 
 #banner.switch {
     background-color: #F2F2F2; /* Light mode banner background color */
-    color: #1C2140; /* Light mode banner text color */
+    color: #4B83F2; /* Light mode banner text color */
     transition: all 2s;
+}
+
+#banner:hover {
+    transform: scale(1.05); /* Slightly increase size */
+    background-color: #F2F2F2; /* Change background color on hover */
+    color: #252525;
 }
 
 main {
