@@ -34,9 +34,18 @@
 
     <p>Hint: Look at <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">this
             page</a> for a refresher on how to add event listeners. For a hint on how to get the text to have a line-through style, check <a href="https://www.w3schools.com/jsref/prop_style_textdecoration.asp">this page</a>.
-        <script>
-            // add your script and don't forget the IIFE and the 'use strict' directive
-        </script>
+            <script>
+                (function() {
+                    'use strict';
+                    document.getElementById('strike').addEventListener('click', function() {
+                        const thirdItem = document.querySelector('#todo li:nth-child(3)');
+                        thirdItem.style.textDecoration = 'line-through';
+                        thirdItem.style.color = '#ccc';
+                    });
+            
+                })();
+            </script>
+            
 </body>
 
 </html>

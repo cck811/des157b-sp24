@@ -16,6 +16,9 @@ header, footer {
     background-color: rgb(218, 32, 177);
     text-align: center;
 }
+img{
+    display: block;
+}
 
 footer {
     padding: 20px;

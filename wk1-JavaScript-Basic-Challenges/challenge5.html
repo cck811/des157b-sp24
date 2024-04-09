@@ -22,7 +22,25 @@
     <h2>The output should look like this</h2>
     <img src="images/challenge5.png" alt="challenge 5 output" width="600">
     <script>
-        // Add your script here. Don't forget the IIFE and 'use strict' directive!
+        (function() {
+            'use strict';
+    
+            const quote = "Stay hungry, stay foolish. - Steve Jobs";
+
+            const words = function(str) {
+                return str.split(' '); 
+            };
+    
+            function processWords(wordArray) {
+                for (let i = 0; i < wordArray.length; i++) {
+                    console.log(`${i + 1}: ${wordArray[i]}`); 
+                }
+                console.log(`The string contains ${wordArray.length} words.`); 
+            }
+            processWords(words(quote));
+    
+        })();
     </script>
+    
 </body>
 </html>

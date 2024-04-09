@@ -63,8 +63,26 @@
     <h2>Challenge Result</h2>
     <img src="images/challenge8.gif" alt="challenge 8 example" width="300" id="example">
     <script>
-        // add your script and don't forget the IIFE and the 'use strict' directive
-    </script>
+        (function() {
+            'use strict';
+       
+            const checkboxes = document.querySelectorAll('.notdone');
+    
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('click', function(event) {
+                    const thisListItem = event.target.parentElement;
+                    if (event.target.checked) {
+                        thisListItem.style.textDecoration = 'line-through';
+                        thisListItem.style.color = '#ccc';
+                    } else {
+                        thisListItem.style.textDecoration = 'none';
+                        thisListItem.style.color = '#333';
+                    }
+                });
+            });
+        })();
+        </script>
+        
 </body>
 
 </html>

@@ -27,13 +27,16 @@
 
     <p>Hint: Look at <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element">this page</a> for a refresher on element properties. If you want to try to use a node property instead, you might check <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node">this page.</a>        To find out more about the element style property, you can check <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style">this page.</a></p>
     <script>
-        (function(){
+        (function() {
             'use strict';
-
-            // script here
-            
+            const bestThing = "Learning something new in JavaScript!";
+            const targetElement = document.getElementById('target');
+            targetElement.textContent = bestThing;
+            targetElement.style.color = 'green';
+    
         })();
     </script>
+    
 </body>
 
 </html>

@@ -22,7 +22,19 @@
     <h2>The output should look like this</h2>
     <img src="images/challenge4.png" alt="challenge 4 output" width="600">
     <script>
-        // your script here. Don't forget the IIFE and 'use strict' directive!
+        (function() {
+            'use strict';
+    
+            const quote = "The only way to do great work is to love what you do. - Steve Jobs";
+    
+            function processQuote(str) {
+                console.log(`The number of characters in the string: ${str.length}`);
+                console.log(`Here is the full string: "${str}"`);
+            }
+            processQuote(quote);
+    
+        })();
     </script>
+    
 </body>
 </html>

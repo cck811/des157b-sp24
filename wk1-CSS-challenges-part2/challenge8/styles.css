@@ -21,10 +21,20 @@ header, footer {
     margin: 20px 0;
     padding: 0;
     list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; 
 }
-.boxes li{
+
+.boxes li {
     border: 5px solid #797070;
     border-radius: 10px;
+    width:25%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px; 
 }
 
 .boxes li:nth-child(1) { background-color: #81c405; }
@@ -35,8 +45,9 @@ header, footer {
 .boxes p {
     font-size: 3em;
     margin: 0;
-    color:darkorange;
+    color: darkorange;
 }
+
 
 footer {
     padding: 20px;

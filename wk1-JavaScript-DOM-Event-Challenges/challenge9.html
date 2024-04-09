@@ -74,8 +74,42 @@
     <p>Hints: There are a few ways to get data from the fields. You can get data from each field individulally by acessing the value property of that field in combination with an ID for the input tag. You can use a loop, and loop through all the input tags and get the values out (intermediate skill level). Or you can use the <code>formData()</code> API and the <code>get()</code> method. You can find out more about it on <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">this page</a>.</p>
 
     <script>
-        // add your script and don't forget the IIFE and the 'use strict' directive
-    </script>
+        (function() {
+            'use strict';
+        
+            const form = document.getElementById('bandform');
+        
+            form.addEventListener('submit', function(event) {
+
+                event.preventDefault();
+        
+                const name = document.getElementById('name').value;
+                const food = document.getElementById('food').value;
+                const verb = document.getElementById('verb').value;
+                const type = document.getElementById('bandtype').value;
+        
+                updatePage(name, verb, food, type);
+
+                emptyFields();
+            });
+        
+
+            function updatePage(name, verb, food, type) {
+                const bandNameText = `Your Optimal Band Name is ${name} and the ${verb} ${food} ${type}`;
+                document.getElementById('bandname').innerHTML = `<h2>Your Optimal Band Name</h2><p>${bandNameText}</p>`;
+            }
+        
+
+            function emptyFields() {
+
+                const inputs = form.querySelectorAll('input[type="text"]');
+                inputs.forEach(input => {
+                    input.value = '';
+                });
+            }
+        })();
+        </script>
+        
 </body>
 
 </html>

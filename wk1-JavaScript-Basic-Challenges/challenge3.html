@@ -21,7 +21,23 @@
     <h2>The output should look like this</h2>
     <img src="images/challenge3.png" alt="challenge 3 output" width="500">
     <script>
-        // Add your script here (don't forget the IIFE and 'use strict' directive).
+        (function() {
+            'use strict';
+    
+            const animals = ['dog', 'cat', 'elephant', 'lion', 'tiger'];
+            const favorite = 'lion';
+    
+            for (let i = 0; i < animals.length; i++) {
+
+                if (animals[i] === favorite) {
+                    console.log(`${animals[i]} <--- favorite!`);
+                } else {
+                    console.log(animals[i]);
+                }
+            }
+    
+        })();
     </script>
+    
 </body>
 </html>

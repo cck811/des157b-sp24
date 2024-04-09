@@ -22,8 +22,17 @@
     <h2>The output should look like this</h2>
     <img src="images/challenge2.png" alt="challenge 2 output" width="500">
     <script>
-        // Add IIFE and use strict
-        // add your script 
+        (function() {
+            'use strict';
+    
+            const animals = ['dog', 'cat', 'elephant', 'lion', 'tiger'];
+    
+            for (let i = 0; i < animals.length; i++) {
+                console.log(animals[i]);
+            }
+    
+        })();
     </script>
+    
 </body>
 </html>

@@ -73,8 +73,34 @@
     </main>
 
     <script>
-        // add your script and don't forget the IIFE and the 'use strict' directive
-    </script>
+        (function() {
+            'use strict';
+        
+            let pageTop = 0;
+            let prevPageTop = 0;
+            let size = 0;
+            const img = document.getElementById('kitten');
+        
+            window.addEventListener('scroll', function() {
+                pageTop = window.pageYOffset;
+        
+                if (pageTop > prevPageTop) { 
+                    if (pageTop % 30 === 0) {
+                        size++;
+                    }
+                } else {
+                    if (pageTop % 30 === 0 && size > 0) {
+                        size--;
+                    }
+                }
+
+                img.src = `http://placekitten.com/${300 + size}/${300 + size}`;
+        
+                prevPageTop = pageTop;
+            });
+        })();
+        </script>
+        
 </body>
 
 </html>
