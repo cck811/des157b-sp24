@@ -24,10 +24,15 @@
 
     <script>
 		
-        document.getElementById('loaddata').addEventListener('click', getData);
-        
         // add getData function with try and catch here...
-        
+        document.getElementById('loaddata').addEventListener('click', getData);
+
+        async function getData() {
+            document.getElementById('remotedata').innerHTML = '<img src="images/spinner.gif">';
+            const fetchPromise = await fetch('https://meadpoint.net/remotedata/data.php');
+            const data = await fetchPromise.json();
+            document.getElementById('remotedata').innerHTML = outputHTML(data);
+        }
 		
 		function outputHTML(data){
 			const html = `<div class="serverdata">
