@@ -93,11 +93,10 @@
             console.log('reading');
             const body = document.querySelector('body');
             const myVideo = document.querySelector('#myVideo');
-            const loading = document.querySelector('.fa-dove');
 
 
             const source = document.querySelector('source');
-            const videos = ['media/flowers.mp4', 'media/flowers.mp4', 'media/redwood.mp4', 'media/turtle.mp4', 'media/waterTower1.mp4'];
+            const videos = ['media/bees.mp4', 'media/flowers.mp4', 'media/redwood.mp4', 'media/turtle.mp4', 'media/waterTower1.mp4'];
             let index = 0;
 
             
@@ -120,7 +119,7 @@
             myVideo.load();
             myVideo.play();
             
-            if (index >= videos.length - 2) {
+            if (index >= videos.length - 1) {
                 index = 0;
             } else {
                 index++;

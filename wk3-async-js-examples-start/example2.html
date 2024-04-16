@@ -27,6 +27,15 @@
     <script>
 
         // Add async code here...
+        document.getElementById('loaddata').addEventListener('click', getData);
+
+async function getData() {
+    document.getElementById('remotedata').innerHTML = '<img src="images/spinner.gif">';
+    //console.log(fetchPromise);
+    const fetchPromise = await fetch('https://meadpoint.net/remotedata/index.php');
+    const content = await fetchPromise.text();
+    document.getElementById('remotedata').innerHTML = content;
+}
 
         // Handling buttons
         let color = "white";
