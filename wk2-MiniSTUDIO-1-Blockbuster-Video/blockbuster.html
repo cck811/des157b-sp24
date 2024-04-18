@@ -9,153 +9,142 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     
     <link rel="preload" href="media/waterTower1.mp4" as="video" type="video/mp4">
-    <link rel="preload" href="media/bees.mp4" as="video" type="video/mp4">
-    <link rel="preload" href="media/flowers.mp4" as="video" type="video/mp4">
     <link rel="preload" href="media/lake.mp4" as="video" type="video/mp4">
     <link rel="preload" href="media/redwood.mp4" as="video" type="video/mp4">
-    <link rel="preload" href="media/turtle.mp4" as="video" type="video/mp4">
 
 <!-- test -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background-color: black;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            color: rgb(255, 255, 255);
-        }
-        
-        #myVideo {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-        }
-        
-        #poem p {
-            position: absolute;
-            padding: 1em;
-            font-size: 2em;
-            background-color: black;
-            transition: all 2.5s;
-        }
-        
-        #line1 {
-            top: 10%;
-            right: 10%;
-        }
-        
-        #line2 {
-            top: 10%;
-            right: 10%;
-        }
-        
-        #line3 {
-            top: 10%;
-            right: 10%;
-        }
+<style>
+    * { /* Universal selector, applies styles to all elements in the document. */
+        margin: 0; /* Removes margin. */
+        padding: 0; /* Removes padding. */
+        box-sizing: border-box; /* Changes the box model to border-box. */
+    }
+    
+    body { /* Styles applied to the <body> element. */
+        background-color: black; /* Sets the background color to black. */
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Sets the font family. */
+        color: rgb(255, 255, 255); /* Sets the text color to white. */
+    }
+    
+    #myVideo { /* Styles applied to the element with id "myVideo". */
+        position: fixed; /* Positions the video fixed relative to the viewport. */
+        right: 0; /* Aligns the video to the right edge of the viewport. */
+        bottom: 0; /* Aligns the video to the bottom of the viewport. */
+        min-width: 100%; /* Minimum width is 100% of the viewport width. */
+        min-height: 100%; /* Minimum height is 100% of the viewport height. */
+    }
+    
 
-        .hidden {
-            opacity: 0;
-        }
-        
-        .showing {
-            opacity: 1;
-        }
+    #poem p { /* Styles applied to <p> elements within the element with id "poem". */
+        position: absolute; /* Positions the paragraphs absolutely within their positioned parent. */
+        padding: 1em; /* Adds padding around the text. */
+        font-size: 2em; /* Sets the font size to 2 times the default. */
+        background-color: black; /* Sets the background color to black. */
+        transition: all 2.5s; /* Adds a transition effect to all properties over 2.5 seconds. */
+    }
+    
+    #line1, #line2, #line3 { /* Styles applied to elements with ids "line1", "line2", and "line3". */
+        top: 10%; /* Positions the top edge of the elements 10% from the top of their positioned parent. */
+        right: 10%; /* Positions the right edge of the elements 10% from the right of their positioned parent. */
+    }
 
-    </style>
+
+    
+    .hidden { /* Style class for hidden elements. */
+        opacity: 0; /* Makes elements fully transparent. */
+    }
+    
+    .showing { /* Style class for showing elements. */
+        opacity: 1; /* Makes elements fully opaque. */
+    }
+
+</style>
 
 </head>
 
-<body>
-    <video id="myVideo" muted autoplay playsinline>
+<body> <!-- Contains the document's content visible to users. -->
+<video id="myVideo" muted autoplay playsinline> <!-- A video element that plays automatically, muted, and inline. -->
 
-        <source src="media/bees.mp4" type="video/mp4">
+    <source src="media/waterTower1.webm" type="video/webm"> <!-- Specifies a video file and its type. -->
 
-        <p>Your browser doesn't support HTML5 video. Here is a <a href="media/bees.mp4">link to the video</a>
-            instead.</p>
-    </video>
+    <p>Your browser doesn't support HTML5 video. Here is a <a href="media/waterTower1.mp4">link to the video</a>
+        instead.</p> <!-- Provides a fallback link to the video if the browser doesn't support the video tag. -->
+</video>
 
-    <section id="poem">
-        <p id="line1" class="hidden">UC Davis Motto</p>
-        <p id="line2" class="hidden">Ad Astra' and 'Comhtrom Féinne</p>
-        <p id="line3" class="hidden">Let There Be Light</p>
-    </section>
+<section id="poem"> <!-- Section meant to encapsulate a poetic piece. -->
+    <p id="line1" class="hidden">UC Davis Motto</p> <!-- A paragraph that is initially hidden. -->
+    <p id="line2" class="hidden">Ad Astra' and 'Comhtrom Féinne</p> <!-- Another initially hidden paragraph. -->
+    <p id="line3" class="hidden">Let There Be Light</p> <!-- Another initially hidden paragraph. -->
+</section>
 
-    <script>
-        (function() {
-            'use strict';
-            console.log('reading');
-            const body = document.querySelector('body');
-            const myVideo = document.querySelector('#myVideo');
-
-
-            const source = document.querySelector('source');
-            const videos = ['media/bees.mp4', 'media/flowers.mp4', 'media/redwood.mp4', 'media/turtle.mp4', 'media/waterTower1.mp4'];
-            let index = 0;
-
-            
-            const line1 = document.querySelector('#line1');
-            const line2 = document.querySelector('#line2');
-            const line3 = document.querySelector('#line3');
+<script>
+    (function() { /* Immediately Invoked Function Expression (IIFE) for encapsulation. */
+        'use strict'; /* Enables strict mode for better error handling. */
+        console.log('reading'); /* Logs 'reading' to the console. */
+        const body = document.querySelector('body'); /* Selects the <body> element. */
+        const myVideo = document.querySelector('#myVideo'); /* Selects the video element by its id. */
 
 
+        const source = document.querySelector('source'); /* Selects the <source> element for the video. */
+        const videos = ['media/waterTower1.mp4', 'media/redwood.mp4', 'media/lake.mp4', ]; /* Array of video file paths. */
+        let index = 0; /* Initializes a variable to track the current video index. */
 
-            myVideo.addEventListener('playing', function() {
-                loading.style.display = 'none';
-            });
+        
+        const line1 = document.querySelector('#line1'); /* Selects the first line by its id. */
+        const line2 = document.querySelector('#line2'); /* Selects the second line by its id. */
+        const line3 = document.querySelector('#line3'); /* Selects the third line by its id. */
 
-            myVideo.addEventListener('ended', changeVideo);
+        
 
-            function changeVideo() {
-            console.log('video ended');
+        myVideo.addEventListener('playing', function() { /* Adds an event listener for when the video starts playing. */
+            loading.style.display = 'none'; /* Hides a loading indicator, assuming it's defined elsewhere. */
+        });
 
-            source.setAttribute('src', videos[index]);
-            myVideo.load();
-            myVideo.play();
-            
-            if (index >= videos.length - 1) {
-                index = 0;
+        myVideo.addEventListener('ended', changeVideo); /* Adds an event listener for when the video ends. */
+        
+        function changeVideo() { /* Function to change the current video. */
+            console.log('video ended'); /* Logs 'video ended' to the console. */
+            if (index >= videos.length - 1) { /* Checks if the last video in the array is playing. */
+                index = 0; /* Resets the index to loop back to the first video. */
             } else {
-                index++;
+                index++; /* Increments the index to play the next video. */
             }
-            }
-
-            const poem = {
-            start: [0, 5, 8],
-            stop: [4, 7, 10],
-            line: [line1, line2, line3]
-            }
-            const intervalID = setInterval(checkTime, 1000);
-
-            function checkTime() {
-            console.log(parseInt(myVideo.currentTime));
-
-            if (poem.start[0] < myVideo.currentTime && myVideo.currentTime < poem.stop[0]) {
-            poem.line[0].className = "showing";
-            } else {
-            poem.line[0].className = "hidden";
-            }
-            if (poem.start[1] < myVideo.currentTime && myVideo.currentTime < poem.stop[1]) {
-            poem.line[1].className = "showing";
-            } else {
-            poem.line[1].className = "hidden";
-            }
-            if (poem.start[2] < myVideo.currentTime && myVideo.currentTime < poem.stop[2]) {
-            poem.line[2].className = "showing";
-            } else {
-            poem.line[2].className = "hidden";
-            }
-            }
+            source.setAttribute('src', videos[index]); /* Sets the new source for the video. */
+            myVideo.load(); /* Loads the new video file. */
+            myVideo.play(); /* Plays the new video file. */
+        }
 
 
-        })();
-    </script>
+        const poem = {
+        start: [0, 5, 8], /* Array of start times for displaying lines of the poem. */
+        stop: [5, 8, 11], /* Array of stop times for displaying lines of the poem. */
+        line: [line1, line2, line3] /* Array of elements representing lines of the poem. */
+        }
+        const intervalID = setInterval(checkTime, 1000); /* Sets an interval to check the video time every second. */
+
+        function checkTime() { /* Function to check the current time of the video and display lines accordingly. */
+        console.log(parseInt(myVideo.currentTime)); /* Logs the current time of the video to the console. */
+
+        if (poem.start[0] < myVideo.currentTime && myVideo.currentTime < poem.stop[0]) { /* Checks if it's time to show the first line. */
+        poem.line[0].className = "showing"; /* Changes the class to make the first line visible. */
+        } else {
+        poem.line[0].className = "hidden"; /* Changes the class to hide the first line. */
+        }
+        if (poem.start[1] < myVideo.currentTime && myVideo.currentTime < poem.stop[1]) { /* Checks if it's time to show the second line. */
+        poem.line[1].className = "showing"; /* Changes the class to make the second line visible. */
+        } else {
+        poem.line[1].className = "hidden"; /* Changes the class to hide the second line. */
+        }
+        if (poem.start[2] < myVideo.currentTime && myVideo.currentTime < poem.stop[2]) { /* Checks if it's time to show the third line. */
+        poem.line[2].className = "showing"; /* Changes the class to make the third line visible. */
+        } else {
+        poem.line[2].className = "hidden"; /* Changes the class to hide the third line. */
+        }
+        }
+
+
+    })();
+</script>
 </body>
 
 </html>
