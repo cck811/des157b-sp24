@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4e4e4e;
+    line-height: 1.4em;
+    max-width: 800px;
+    margin: auto;
+}
+
+.card {
+    background-color: #c2e8dc;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+footer {
+    background-color: #a1bb87;
+    padding: 20px;
+    text-align: center;
+}

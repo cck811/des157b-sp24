@@ -1,0 +1,87 @@
+{
+    "point1" : {
+        "time" : "10:00",
+        "mood" : 3,
+        "reason" : "relaxed about today"
+    },
+    "point2" : {
+        "time" : "10:15",
+        "mood" : 4,
+        "reason" : "feeling creative"
+    },
+    "point3" : {
+        "time" : "10:30",
+        "mood" : 4,
+        "reason" : "making progress"
+    },
+    "point4" : {
+        "time" : "10:45",
+        "mood" : 4,
+        "reason" : "in the groove"
+    },
+    "point5" : {
+        "time" : "11:00",
+        "mood" : 3,
+        "reason" : "starting to get hungry"
+    },
+    "point6" : {
+        "time" : "11:15",
+        "mood" : 2,
+        "reason" : "getting hungrier"
+    },
+    "point7" : {
+        "time" : "11:30",
+        "mood" : 1,
+        "reason" : "starving"
+    },
+    "point8" : {
+        "time" : "11:45",
+        "mood" : 0,
+        "reason" : "definitely hangry"
+    },
+    "point9" : {
+        "time" : "12:00",
+        "mood" : 3,
+        "reason" : "eating lunch, what a relief!"
+    },
+    "point10" : {
+        "time" : "12:15",
+        "mood" : 4,
+        "reason" : "ready to get to it!"
+    },
+    "point11" : {
+        "time" : "12:30",
+        "mood" : 5,
+        "reason" : "had a great idea!"
+    },
+    "point12" : {
+        "time" : "12:45",
+        "mood" : 3,
+        "reason" : "working out details"
+    },
+    "point13" : {
+        "time" : "13:00",
+        "mood" : 1,
+        "reason" : "call from my X. Grrrr"
+    },
+    "point14" : {
+        "time" : "13:15",
+        "mood" : 5,
+        "reason" : "idea is working out!"
+    },
+    "point15" : {
+        "time" : "13:30",
+        "mood" : 4,
+        "reason" : "in the groove!"
+    },
+    "point16" : {
+        "time" : "13:45",
+        "mood" : 3,
+        "reason" : "Ok, but I need a nap"
+    },
+    "point17" : {
+        "time" : "14:00",
+        "mood" : 3,
+        "reason" : "chugging along..."
+    }
+}

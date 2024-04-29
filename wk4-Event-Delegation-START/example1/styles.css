@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4e4e4e;
+    line-height: 1.4em;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    padding: 20px;
+}
+
+.bttn {
+    display: block;
+    width: 200px;
+    background-color: #935529;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.original {
+    background-color: #c2e8dc;
+}
+
+.new {
+    background-color: #e9e3bf;
+}

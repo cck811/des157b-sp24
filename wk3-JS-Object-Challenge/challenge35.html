@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 35</title>
+</head>
+<body>
+    <script>
+    var pet = {
+        name: "Rocky",
+        species: "hamster"
+    }
+    
+    pet.name = "Bouncer";
+    pet.species = "dog";
+    pet.qualities = {
+        color: "brown",
+        size: "medium",
+        disposition: "friendly"
+    }
+
+    pet.qualities.supplies = ["dog food", "dog bed", "treats", "collar", "leash"];
+
+    console.log(`I need to get ${pet.qualities.supplies.length} supplies for ${pet.name} at the store.`);
+
+    pet.greeting = function() { alert("woof woof woof"); };
+    
+    pet.greeting();
+
+    console.log(pet);
+
+      </script>
+      
+</body>
+</html>
