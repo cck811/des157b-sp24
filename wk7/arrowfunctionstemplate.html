@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <style>
+        html {
+            background-color: #efefef;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.4em;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Examples and Challenges</h1>
+    <ol>
+        <li><a href="arrowfunctionsexamples.html">Examples</a></li>
+        <li><a href="challenge1.html">Challenge 1</a></li>
+        <li><a href="challenge2.html">Challenge 2</a></li>
+        <li><a href="challenge3.html">Challenge 3</a></li>
+        <li><a href="challenge4.html">Challenge 4/a></li>
+        <li><a href="challenge5.html">Challenge 5</a></li>
+    </ol>
+
+    <h1>Text Transformation Functions</h1>
+
+    <p>Got this simple text transformation functions that convert messages to uppercase and lowercase from wk3-JS-Event-Loop</p>
+
+    <h2>Named Function</h2>
+    <code>
+        <pre>
+            function mkUpperCase(message) {
+                return message.toUpperCase();
+            }
+
+            function mkLowerCase(message) {
+                return message.toLowerCase();
+            }
+        </pre>
+    </code>
+
+    <h2>Function Expression</h2>
+    <code>
+        <pre>
+            const outputMessages = function(message) {
+                let output = `Uppercase version: ${mkUpperCase(message)}\n`;
+                output += `Lowercase version: ${mkLowerCase(message)}`;
+                console.log(output);
+            };
+        </pre>
+    </code>
+
+    <h2>Arrow Function</h2>
+    <code>
+        <pre>
+            const outputMessages = message => {
+                let output = `Uppercase version: ${mkUpperCase(message)}\n`;
+                output += `Lowercase version: ${mkLowerCase(message)}`;
+                console.log(output);
+            };
+        </pre>
+    </code>
+
+    <footer> Anthony Chan </footer>
+    
+</body>
+</html>
