@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Comments</h1>
+        <form id="comment-form">
+            <input type="text" id="username" placeholder="Your name" required>
+            <textarea id="comment" placeholder="Your comment" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="comments"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/3.3.0/parse.min.js"></script>
+
+</body>
+</html>
