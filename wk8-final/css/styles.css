@@ -28,6 +28,13 @@ main{
     font-family: 'Montserrat Subrayada', sans-serif;
     margin: auto;
 }
+#interactive-main{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    padding: 0;
+    background-color: #fff;
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CSS Start~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 body {
     font-family: 'Montserrat Subrayada', sans-serif;
@@ -94,19 +101,23 @@ button {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~slider~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .interactive {
-    margin: 20px auto;
     padding: 20px;
     max-width: 800px;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .sliders {
+    background-color: #fff;
+    /* border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 0px;
 }
 
 .slider {
@@ -167,6 +178,8 @@ canvas {
 
 
 #show-instructions {
+    position: fixed;
+    right: 5%;
     font-size: 30px;
     background: #ffffff00;
     border-radius: 50%;
@@ -204,10 +217,9 @@ canvas {
 .container {
     background: #fff;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    width: 400px;
-    margin: auto;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; */
+    width: 300px;
 }
 
 .container h1 {
