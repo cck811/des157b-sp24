@@ -35,6 +35,7 @@ main{
     padding: 0;
     background-color: #fff;
 }
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CSS Start~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 body {
     font-family: 'Montserrat Subrayada', sans-serif;
@@ -42,15 +43,10 @@ body {
     padding: 0;
     background-color: #f5f5f5;
 }
-.history, .welcome-screen p{
-margin: auto;
-padding-inline: 130px;
-max-width: 800px;
-}
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #262b2b;
+    color: #b7bdb9;;
     padding: 10px 0;
 }
 
@@ -89,6 +85,30 @@ h1, h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~index page styling~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.welcome-screen p{
+    margin: 1rem auto;
+    padding-inline: 130px;
+    max-width: 800px;
+}
+.welcome-screen{
+    color: #b7bdb9;
+}
+.index-header{
+    margin: 1rem auto;
+}
+#index-intro-title{
+    margin: 1rem auto;
+}
+#index-body{
+    background-color: #262b2b;
+}
+.hero{
+    margin: auto;
 }
 
 button {
@@ -96,7 +116,14 @@ button {
     margin: 20px auto;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 30px;
     cursor: pointer;
+    background-color: #83695f;
+    color: #fff;
+    border-width: 0;
+}
+button:hover {
+    background-color: #a7938c;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~slider~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -110,8 +137,7 @@ button {
 
 .sliders {
     background-color: #fff;
-    /* border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    justify-content: flex-end;
     padding: 20px;
     width: 300px;
     display: flex;
@@ -136,7 +162,6 @@ canvas {
 .explanation {
     margin-top: 20px;
     font-size: 16px;
-    font-family: Arial, sans-serif;
     line-height: 1.5;
 }
 
@@ -200,7 +225,7 @@ canvas {
     color: #ffffff;
     font-family: 'Rye', sans-serif;
     border: 0;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 1.2em;
     margin-inline: auto;
@@ -209,7 +234,6 @@ canvas {
 
 #close-instructions:hover {
     background-color: #979797;
-    border-radius: 5px;
     color: #ffffff;
 }
 

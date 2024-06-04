@@ -29,32 +29,33 @@
         </nav>
     </header>
     <main id="interactive-main">
-        <div class="container">
-            <h1>Comments</h1>
-            <form id="comment-form">
-                <input type="text" id="username" placeholder="Enter your name here" required>
-                <textarea id="comment" placeholder="Leave your comments here..." required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-            <div id="comments"></div>
-        </div>
         <div class="interactive">
             <h2>Interactive Scenario Simulator</h2>
             <p>Adjust the sliders to see the impact of different economic policies.</p>
             <canvas id="feedback-canvas" width="800" height="600"></canvas>
             <div id="explanation" class="explanation"></div>
         </div>
-        <div class="sliders">
-            <label>Tax Rate</label>
-            <div id="slider1" class="slider"></div>
-            <label>Minimum Wage</label>
-            <div id="slider2" class="slider"></div>
-            <label>Social Welfare</label>
-            <div id="slider3" class="slider"></div>
-            <label>Market Forces</label>
-            <div id="slider4" class="slider"></div>
+        <div>
+            <div class="sliders">
+                <label>Tax Rate</label>
+                <div id="slider1" class="slider"></div>
+                <label>Minimum Wage</label>
+                <div id="slider2" class="slider"></div>
+                <label>Social Welfare</label>
+                <div id="slider3" class="slider"></div>
+                <label>Market Forces</label>
+                <div id="slider4" class="slider"></div>
+            </div>
+            <div class="container">
+                <h1>Comments</h1>
+                <form id="comment-form">
+                    <input type="text" id="username" placeholder="Enter your name here" required>
+                    <textarea id="comment" placeholder="Leave your comments here..." required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="comments"></div>
+            </div>
         </div>
-
     </main>
     <button id="show-instructions">?</button>
 
