@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Simulator</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/3.3.0/parse.min.js"></script>
+    <script src="../js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="interactive.html">Interactive Simulator</a></li>
+                <li><a href="factual-analysis.html">Factual Analysis</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="interactive-main">
+        <div class="interactive">
+            <h2>Interactive Scenario Simulator</h2>
+            <p>Adjust the sliders to see the impact of different economic policies.</p>
+            <canvas id="feedback-canvas" width="800" height="600"></canvas>
+            <div id="explanation" class="explanation"></div>
+        </div>
+        <div>
+            <div class="sliders">
+                <label>Tax Rate</label>
+                <div id="slider1" class="slider"></div>
+                <label>Minimum Wage</label>
+                <div id="slider2" class="slider"></div>
+                <label>Social Welfare</label>
+                <div id="slider3" class="slider"></div>
+                <label>Market Forces</label>
+                <div id="slider4" class="slider"></div>
+            </div>
+            <div class="container">
+                <h1>Comments</h1>
+                <form id="comment-form">
+                    <input type="text" id="username" placeholder="Enter your name here" required>
+                    <textarea id="comment" placeholder="Leave your comments here..." required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="comments"></div>
+            </div>
+        </div>
+    </main>
+    <button id="show-instructions">?</button>
+
+    <div id="instructions-overlay">
+        <div class="overlay-content">
+            <h2>Objective:</h2>
+            <p>Explore the impact of different economic policies on wealth distribution.</p>
+            <h2>How to Use the Simulator:</h2>
+            <ul>
+                <li><p>Adjust the sliders to change various economic policies.</p></li>
+                <li><p>Observe the real-time changes in wealth distribution and other economic indicators.</p></li>
+                <li><p>Leave comments to share your insights and feedback.</p></li>
+            </ul>
+            <button id="close-instructions">Close</button>
+        </div>
+    </div>
+</body>
+</html>
