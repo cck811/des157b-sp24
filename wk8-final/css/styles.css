@@ -470,7 +470,7 @@ margin-bottom: 10px;
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    padding: none;
+    padding: 0;
     padding-block: 10px;
     text-decoration: underline;
     transition: none;
