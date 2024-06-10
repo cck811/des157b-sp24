@@ -19,23 +19,16 @@
     <script src="../js/scripts.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="interactive.html">Interactive Simulator</a></li>
-                <li><a href="factual-analysis.html">Factual Analysis</a></li>
-            </ul>
-        </nav>
-    </header>
+
     <main id="interactive-main">
+        <button id="back-button" onclick="window.location.href='../index.html'">&lt; Back</button>
         <div class="interactive">
             <h2>Interactive Scenario Simulator</h2>
             <p>Adjust the sliders to see the impact of different economic policies.</p>
             <canvas id="feedback-canvas" width="800" height="600"></canvas>
             <div id="explanation" class="explanation"></div>
         </div>
-        <div>
+        <div id="side-bar">
             <div class="sliders">
                 <label>Tax Rate</label>
                 <div id="slider1" class="slider"></div>

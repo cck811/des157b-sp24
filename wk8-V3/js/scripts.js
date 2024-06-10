@@ -246,7 +246,7 @@
             for (const [scenario, conditions] of Object.entries(scenarios)) {
                 for (const condition of conditions) {
                     if (taxRate === condition[0] && minWage === condition[1] && socialWelfare === condition[2] && marketForces === condition[3]) {
-                        imgSrc = `../images/${scenario}.svg`;
+                        imgSrc = `../images/${scenario}.png`;
                         break;
                     }
                 }

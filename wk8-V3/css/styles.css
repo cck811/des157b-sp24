@@ -1,4 +1,5 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~CSS Quick Reset~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+html, body{height: 100%}
 img {
     display: block; 
     max-width: 100%; /* keeps image within container*/
@@ -27,13 +28,14 @@ h1, h2 { /*change default margin*/
 main{
     font-family: 'Montserrat Subrayada', sans-serif;
     margin: auto;
+    height: 100%
 }
 #interactive-main{
     display: flex;
     width:100%;
     justify-content: center;
     padding: 0;
-    background-color: #fff;
+    background-color: #262C2C;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CSS Start~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -88,6 +90,9 @@ h1, h2 {
     
 }
 
+#back-button{
+    height: 40px;
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~index page styling~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .welcome-screen p{
@@ -125,6 +130,10 @@ button {
 button:hover {
     background-color: #a7938c;
 }
+
+#side-bar{
+    background-color: #fff;
+}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~slider~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .interactive {
@@ -160,9 +169,13 @@ canvas {
 }
 
 .explanation {
+    background-color: #4A8C8B;
+    color: #fff;
     margin-top: 20px;
     font-size: 16px;
     line-height: 1.5;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Instructions Overlay~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -181,9 +194,8 @@ canvas {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 65vh;
-    max-height: 650px;
-    max-width: 600px;
+    height: 400px;
+    width: 500px;
     transform: translate(-50%, -50%);
     background: #ffffff;
     padding: 40px;
@@ -204,36 +216,36 @@ canvas {
 
 #show-instructions {
     position: fixed;
-    right: 5%;
+    right: 100px;
+    bottom: 100px;
     font-size: 30px;
-    background: #ffffff00;
+    font-weight: bold;
+    background: #fee7bbbb;
     border-radius: 50%;
     border-width: 5px;
-    color: #3f3f3f;
-    border-color: #696969;
+    color: #E37D64;
+    border-color: #D99B84;
     width: 70px;
     height: 70px;
 }
 
 #show-instructions:hover {
-    background: #0000006e;
+    background: #fee7bb;
 }
 
 #close-instructions {
-    padding: 10px 20px;
-    background-color: #2e2e2e;
+    margin-top: auto;
+    background-color: #846960;
     color: #ffffff;
-    font-family: 'Rye', sans-serif;
     border: 0;
     border-radius: 25px;
     cursor: pointer;
-    font-size: 1.2em;
     margin-inline: auto;
     display: block;
 }
 
 #close-instructions:hover {
-    background-color: #979797;
+    background-color: #ae9b94;
     color: #ffffff;
 }
 
@@ -264,10 +276,10 @@ input, textarea {
 
 .container button {
     padding: 10px;
-    background-color: #070707;
+    background-color: #2D4162;
     color: #fff;
     border: none;
-    border-radius: 3px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
